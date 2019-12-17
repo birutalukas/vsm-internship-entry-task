@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Text Style */
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25rem;
+    span {
+        font-weight: 300;
+    }
+}
+
+/* Template Parts */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+/* Image Thumbnail Style */
+aside {
+    overflow-x: hidden; 
+    width: 300px;
+    padding: 15px;
+    .thumb {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 0 10px 10px 10px;
+        overflow: hidden;
+        &:hover .overlay {
+            opacity: .5;
+        }
+        &:first-child {
+
+        }
+        img {
+            position: absolute;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .overlay {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        opacity: 0;
+        z-index: 2;
+    }
+}
+
+/* Large Image Style */
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+    }
+    .imgText {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1.25rem 1rem 0 3rem;
+        background-color: black;
+        color: #fff;
+        opacity: .7;
+    }
+}
